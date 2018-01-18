@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./jquery-1.12.2.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <button>Click me</button>
+  <p id="test">我是一个段落标签，id为test</p>
+  <p>我是一个没有id,没有类的p标签</p>
+  <p class="test">我是一个类名为test的p标签</p>
+  <div>我是什么都没有的div标签</div>
+</body>
+<script>
+  /*所有的jQuery函数位于一个document ready函数中；这是为了防止文档在完全家在之前运行jQuery代码*/
+  $(document).ready(function(){
+    $("button").click(function(){
+    // 1、隐藏当前的HTML元素
+       // $(this).hide();
+    //2、隐藏 id=test 的元素   
+      // $("#test").hide();
+    //3、隐藏 class=test的元素
+      //  $(".test").hide();  
+    //4、隐藏所有的p标签元素
+    $("p").hide();  
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery元素选择器</title>
+  <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+  <button> Click me</button>
+  <p>p标签</p>
+  <p class="info">class为info的p标签字体</p>
+  <p id="test">id为test的p标签字体</p>
+  <h2>标题标签呢</h2>
+  <div>div标签</div>
+</body>
+<script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      //1、选取<p>元素
+      $("p").css("background-color","red");
+      //2.选取所有class="info"的<p>元素
+      $("p.info").css("color","green");
+      //3、选取所有id="test"的<p>元素
+      $("p#test").css("font-size","40px");
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>jquery名称冲突</title>
+ <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+ <button id="btn">test</button>
+ <p>这是一个段落</p>
+</body>
+<script>
+ //jQuery使用$符号作为jQuery的简写方式
+ //某些其他JavaScript库中的函数(比如Prototype)同样使用$符号。
+ //jQuery使用名为noConflict()的方法解决该问题
+ //例如：var jq = jQuery.noConflict(),帮助使用自己的名称(比如jq)来代替$符号
+ var jq = $.noConflict();
+ jq(document).ready(function(){
+  jq('#btn').click(function(){
+    jq("p").text("这是测试内容")
+  });
+ });
+
+ /*
+ 由于jQuery是为处理HTML事件而特别设计的，那么当遵循以下原则时，代码会更易维护
+ 1、把所有的jQuery代码置于事件处理函数中
+ 2、把所有事件处理函数置于文档就绪处理器中
+ 3、把jQuery代码置于单独的.js 文件中
+ 4、若存在名称冲突，则重命名jQuery库
+ */
+//jQuery事件方法的一些例子
+/*
+ $(document).ready(function)  —— —— —— —— 将函数绑定到文档的就绪事件
+ $(selector).clcik(functon) —— —— —— —— 触发或将函数绑定到被选元素的点击事件
+ $(selector).dbclcik(functon) —— —— —— 触发或将函数绑定到被选元素的双击事件
+ $(selector).focus(functon) —— —— —— —— 触发或将函数绑定到被选元素的获得触发或将函数绑定到被选元素的获得焦点事件
+ $(selector).mouseover(functon) —— —— —— —— 触发或将函数绑定到被选元素的鼠标悬停事件
+*/
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>jQuery_show/hide</title>
+ <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+ <p>点击隐藏按钮，文字隐藏；点击显示按钮，文字显示</p>
+ <button id="hide">隐藏</button>
+ <button id="show">显示</button>
+ <button id="toggle">隐藏 / 显示</button>
+</body>
+<script>
+ $(document).ready(function(){
+  /*
+  $("#hide").click(function(){
+    $("p").hide("slow");
+  });
+  $("#show").click(function(){
+    $("p").show(1000);
+  });
+  */
+
+  //jQuery toggle()
+  //通过jquery使用toggle()方法来切换hide()和show()。
+  $('#toggle').click(function(){
+    $("p").toggle("fast");
+  });
+ });
+ //语法：
+ //$(selector).hide(speed,callback);
+ //$(selector).show(speed,callback);
+ //可选的speed参数规定隐藏或显示的速度，可以选取以下值："slow"、"fast"、毫秒
+ //可选的callback参数是隐藏或显示完成后执行的函数名称
+</script>
+</html>

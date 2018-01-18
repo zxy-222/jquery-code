@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>css选择器</title>
+ <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+ <input type="button" value="Click me" id="btn">
+ <ul>
+  <li>蹦蹦蹦</li>
+  <li>啦啦啦</li>
+  <li>123</li>
+  <li>456</li>
+ </ul>
+</body>
+<script>
+ $(document).ready(function(){
+   $("#btn").click(function(){
+    //第一种设置元素的方式
+     /*
+     $("ul").css("background","red");
+     $("ul > Li").css("background","#0094ff");
+     $("ul > Li").css("font-size","35px");
+     $("ul > Li").css("color","white");
+     $("ul > Li").css("mrgin-left","20px");
+     */
+
+     //第二种：链式编程
+     /*
+     $("ul > Li").css("background","#0094ff").css("font-size","35px").css("color","white");*/
+     //当然要求每次返回的对象是同一个
+
+     //第三种：以键值对的形式
+     $("ul > li").css({"background":"green","font-size":"30px","margin-top":"20px"})
+   });
+ });
+</script>
+</html>

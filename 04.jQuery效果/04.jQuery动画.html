@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>jQuery_animate</title>
+ <style>
+  #div1{
+   width: 100px;
+   height: 100px;
+   background-color: rgb(43, 214, 226);
+   margin-top: 20px;
+   position: absolute;
+  }
+ </style>
+ <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+ <button id="btn">animate</button>
+ <div id="div1"></div>
+</body>
+<script>
+ $(document).ready(function(){
+  $("#btn").click(function(){
+   //$(selector).animate({params},speed,callback);
+   //若需进行位置操作，则先把元素的css position属性设置为relative或absolute或fixed
+   $("#div1").animate({left:'550px',opacity:'0.85',height:"+=150px",width:"+=150px"},2000)
+  });
+ });
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>jQuery_callback</title>
+ <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+ <button id="hide">Hide</button>
+ <p>This is a paragraph with little content.</p>
+ <script>
+   $(document).ready(function(){
+    $("#hide").click(function(){
+     //这是错误的，没有callback，会导致页面冲突
+     // $("p").hide(1000);
+     // alert("The paragraph is now disappear");
+     $("p").hide(1000,function(){
+      alert("The paragraph is now disappear");
+     });
+    })
+   });
+  </script>
+</body>
+</html>

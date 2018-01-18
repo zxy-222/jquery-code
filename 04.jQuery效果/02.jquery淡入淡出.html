@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>淡入淡出</title>
+ <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+ <button id="fadeIn">fadeIn</button>
+ <button id="fadeOut">fadeOut</button>
+ <button id="fadeToggle">fadeToggle</button>
+ <button id="fadeTo">fadeTo</button>
+ <div id="div1">div1</div>
+ <div id="div2">div2</div>
+</body>
+<script>
+ $(document).ready(function(){
+  //1、fadeIn()、fadeOut()方法，参数可选
+  /*
+   $("#fadeIn").click(function(){
+    $("#div1").css({"width":"200px","height":"200px","background":"red","margin-top":"20px"}).fadeIn("slow")
+   });
+   $("#fadeOut").click(function(){
+    $("#div1").css({"width":"200px","height":"200px","background":"red","margin-top":"20px"}).fadeOut("slow")
+   });
+   */
+  //2、fadeToggle()方法
+  /*
+    $("#fadeToggle").click(function(){
+     $("#div1").css({"width":"200px","height":"200px","background":"red","margin-top":"20px"}).fadeToggle("slow");
+    });
+  */
+  //3、fadeTo()方法允许渐变为给定的不透明度(值介于0~1之间);$(selector).fadeTo(speed,opacity,callback)
+  $("#fadeTo").click(function(){
+     $("#div1").css({"width":"200px","height":"200px","background":"red","margin-top":"20px"}).fadeTo("slow",0.8);
+     $("#div2").css({"width":"200px","height":"200px","background":"green","margin-top":"20px"}).fadeTo("slow",0.3);
+    });
+ });
+</script>
+</html>

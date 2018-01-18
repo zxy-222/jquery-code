@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>属性选择器</title>
+ <script src="../jquery-1.12.2.min.js"></script>
+</head>
+<body>
+ <button id="btn"> Click me</button>
+ <a href="#">链接1</a>
+ <a href="javascript:">链接2</a>
+ <a href="2.jpg">链接3</a>
+</body>
+<script>
+ $(document).ready(function(){
+  $("#btn").click(function(){
+   //1、选取所有带有href属性的元素
+   //$("[href]").css("color","red");
+
+   //2、选取所有带有href值等于"#"的元素
+  // $("[href='#']").css("color","green");
+
+   //3、选取所有带有href值不等于"#"的元素
+  //$("[href !='#']").css("color","cyan");
+
+  //4、选取所有href值以.jpg结尾的元素
+  $("[href$='.jpg']").css("color","yellow");
+  });
+ });
+</script>
+</html>

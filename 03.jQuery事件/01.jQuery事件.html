@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>jQuerey事件</title>
+ <script src="../jquery-1.12.2.min.js"></script>
+ <script>
+  //jquery事件处理方法是jquery中的核心函数
+  //事件处理程序是指当HTML中发生某些事件时调用的方法，术语有事件"触发"，通常会把jQuery代码放到<head>部分处理方法
+   $(document).ready(function(){
+    //当
+     $("button").click(function(){
+       $("p").hide();
+     });
+   });
+
+   //若网站中包含许多页面，并且希望jQuery函数易于维护，则需要把jQuery函数放到单独的js文件中
+ </script>
+</head>
+<body>
+ <button> Click me</button>
+ <h2>这是一个标题</h2>
+ <p>这是一个段落</p>
+</body>
+</html>
